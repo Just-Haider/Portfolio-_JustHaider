@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JustHaider | Portfolio</title>
+    <meta name="description"
+        content="_JustHaider - A passionate and curious individual driven by a love for learning, innovation, and creative expression. Discover insights into life, technology, and personal growth.">
+    <link rel="icon" href="assets/images/pfp.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="loader" class="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <nav>
+        <div class="nav-logo glitch">_JustHaider</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <div id="particles-js"></div>
+    <section class="hero" id="home">
+        <div>
+            <h1>_JustHaider</h1>
+        </div>
+        <div class="text">
+            <p> <span class="cursor"></span></p>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I'm a passionate web developer with expertise in HTML, CSS, and JavaScript. I create beautiful and
+                    functional websites that leave a lasting impression.</p>
+                <p>My speciality doesn't end there I have been a lot of experiance with Developing MineCraft servers</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="skill-icon">HTML</i>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="95"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <i class="skill-icon">CSS</i>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="85"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <i class="skill-icon">JavaScript</i>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="70"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <i class="skill-icon">Java</i>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="55"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Services</h2>
+            <div class="services-grid">
+                <div class="service-card slide-left glow-purple">
+                    <h3>Website Development</h3>
+                    <ul>
+                        <li>Bespoke website creation</li>
+                        <li>Robust server infrastructure configuration</li>
+                        <li>Performance tuning and optimization</li>
+                        <li>Implementation of DDoS defense measures</li>
+                        <li>24/7 monitoring and support services</li>
+                        <li>Actively Supporting</li>
+                    </ul>
+                </div>
+
+                <div class="service-card slide-right glow-purple">
+                    <h3>Minecraft Plugin Development</h3>
+                    <ul>
+                        <li>Custom plugin design and integration</li>
+                        <li>Enhanced game functionality and performance tweaks</li>
+                        <li>Server optimization for smooth gameplay</li>
+                        <li>Compatibility adjustments for various Minecraft versions</li>
+                        <li>Community support and troubleshooting</li>
+                    </ul>
+                    <br>
+                    <p class="note">Note: Currently, I'm not actively developing Minecraft plugins.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card1">
+                <div class="project-content">
+                    <h3>Ultimate Portfolio</h3>
+                    <p>
+                        Available on BuiltByBuit for free by me
+                        <span>
+                            <a href="https://builtbybit.com/resources/ultimate-portfolio.61020/" target="_blank">
+                                View
+                                <img src="assets/svgs/right-arrow.svg" alt="right-arrow">
+                            </a>
+                        </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-card2">
+                <div class="project-content">
+                    <h3>Q-Teams</h3>
+                    <p>
+                        A high quality Minecraft teams Plugin
+                        <span>
+                            <a href="https://builtbybit.com/resources/q-teams.56579/" target="_blank">
+                                View
+                                <img src="assets/svgs/right-arrow.svg" alt="right-arrow">
+                            </a>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="project-card3">
+                <div class="project-content">
+                    <h3>ZenithMC WebPages</h3>
+                    <p>
+                        Built the Web Pages for ZenithMC
+                        <span>
+                            <a href="https://web.zenithnetwork.xyz/" target="_blank">
+                                View
+                                <img src="assets/svgs/right-arrow.svg" alt="right-arrow">
+                            </a>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <h2 class="section-title">Client Reviews</h2>
+            <div class="reviews-header">
+                <p class="reviews-intro">Don't just take my word for it - here's what clients have to say about working with me.</p>
+            </div>
+            <div id="reviews-container" class="reviews-grid">
+                <!-- Reviews will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <input type="text" name="user_name" placeholder="Name" required>
+            <input type="email" name="user_email" placeholder="Email" required>
+            <textarea name="message" placeholder="Message" required></textarea>
+            <button type="submit" class="send-msg">Send Message</button>
+            <p id="form-message" class="hidden"></p> <!-- Message Box -->
+        </form>
+
+        <div class="discord" style="position: relative;">
+            <h3>
+                Discord Username:
+                <span id="discord-username" style="position: relative; cursor:pointer; color:#7289da;"
+                    title="Click to copy!">
+                    _justhaider
+                    <span class="click-me" id="discord-username">
+                        click me
+                    </span>
+                </span>
+            </h3>
+            <small id="copy-feedback">
+                Copied to clipboard!
+            </small>
+        </div>
+    </section>
+
+    <!-- Include EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            emailjs.init("4c-rGhMyymEbwFRDC");
+
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2025 _JustHaider. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
