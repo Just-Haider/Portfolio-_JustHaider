@@ -1,4 +1,3 @@
-// Loader 
 
 window.addEventListener('load', () => {
     setTimeout(() => {
@@ -16,7 +15,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Intersection Observer for animation on scroll
 const observer3 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -29,7 +27,7 @@ document.querySelectorAll('.project-card, .skill').forEach((el) => {
     observer3.observe(el);
 });
 
-// Dynamic cursor text effect
+
 const cursor = document.querySelector('.cursor');
 const texts = ["Web Developer", "UI-Designer", "Tech Enthusiast", "Minecraft Developer"];
 let currentText = 0;
@@ -60,30 +58,25 @@ type();
 
 
 
-
-// Animate skill bars
 document.addEventListener('DOMContentLoaded', () => {
     const skillCards = document.querySelectorAll('.skill-card');
 
-    // Create an Intersection Observer to detect when each skill card enters the viewport.
     const observer4 = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Add the 'visible' class to trigger the fly-down animation.
+              
                 entry.target.classList.add('visible');
 
-                // Animate the progress bar inside this skill card.
+
                 const progressBar = entry.target.querySelector('.skill-progress');
                 const progressValue = progressBar.getAttribute('data-progress');
                 progressBar.style.width = progressValue + '%';
 
-                // Unobserve the card so the animation only happens once.
                 observer.unobserve(entry.target);
             }
         });
     }, { threshold: 0.5 });
 
-    // Observe each skill card.
     skillCards.forEach(card => {
         observer4.observe(card);
     });
@@ -91,8 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-// Services Section
 
 document.addEventListener('DOMContentLoaded', () => {
     const serviceCards = document.querySelectorAll('.service-card');
@@ -112,7 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Project Cards 
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -122,10 +112,10 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // animate only once
+                observer.unobserve(entry.target); 
             }
         });
-    }, { threshold: 0.5 }); // Adjust threshold as needed
+    }, { threshold: 0.5 }); 
 
     projectCards.forEach(card => {
         observer.observe(card);
@@ -133,7 +123,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -145,7 +134,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Intersection Observer for skill bars animation
 const skillsSection = document.querySelector('.skills');
 const observer2 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -158,7 +146,6 @@ const observer2 = new IntersectionObserver((entries) => {
 observer2.observe(skillsSection);
 
 
-// Discord username copy
 
 document.getElementById("discord-username").addEventListener("click", function () {
     const username = this.textContent.trim();
@@ -177,7 +164,6 @@ document.getElementById("discord-username").addEventListener("click", function (
 
 
 
-// Custon Scroll Bar
 window.addEventListener('scroll', function () {
     const scrollTop = document.documentElement.scrollTop;
     const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -190,30 +176,27 @@ window.addEventListener('scroll', function () {
 
 
 
-// Email Setup
-
 const contactForm = document.getElementById("contact-form");
-const messageBox = document.getElementById("form-message"); // Message box element
+const messageBox = document.getElementById("form-message"); 
 
 contactForm.addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent default form submission
+    e.preventDefault();
 
-    // Retrieve field values
     const userName = contactForm.elements["user_name"].value;
     const userEmail = contactForm.elements["user_email"].value;
     const userMessage = contactForm.elements["message"].value;
 
-    // Validate email using a regular expression
+
     if (!validateEmail(userEmail)) {
         showMessage("Please enter a valid email address", "error");
         return;
     }
 
-    // Combine name, email, and original message into one string
+
     contactForm.elements["message"].value =
         "Name: " + userName + "\nEmail: " + userEmail + "\nMessage: " + userMessage;
 
-    // Send form using EmailJS
+
     emailjs.sendForm("service_h5qp5lo", "template_2ccn0td", this)
         .then((response) => {
             console.log("SUCCESS!", response.status, response.text);
@@ -226,7 +209,7 @@ contactForm.addEventListener("submit", function (e) {
         });
 });
 
-// Function to show the message
+
 function showMessage(text, type) {
     messageBox.textContent = text;
     messageBox.className = type === "success" ? "message success" : "message error";
@@ -238,7 +221,6 @@ function showMessage(text, type) {
     }, 3000);
 }
 
-// Email validation function using regex
 function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
@@ -259,7 +241,7 @@ particlesJS("particles-js", {
         }
       },
       "color": {
-        "value": ["#a8dadc", "#457b9d", "#1d3557"]  // Pastel night sky colors
+        "value": ["#a8dadc", "#457b9d", "#1d3557"] 
       },
       "shape": {
         "type": "circle",
@@ -341,17 +323,21 @@ particlesJS("particles-js", {
   });
 
 
-
-
-
-
-
-// Review System
 class ReviewSystem {
     constructor() {
         this.reviews = [];
         this.container = document.getElementById('reviews-container');
+        this.userId = this.getOrCreateUserId(); 
         this.setupReviewForm();
+    }
+
+    getOrCreateUserId() {
+        let userId = localStorage.getItem('userId');
+        if (!userId) {
+            userId = 'user-' + Math.random().toString(36).substr(2, 9); 
+            localStorage.setItem('userId', userId);
+        }
+        return userId;
     }
 
     setupReviewForm() {
@@ -393,10 +379,10 @@ class ReviewSystem {
                 author: name,
                 rating: rating,
                 text: text,
-                date: new Date()
+                date: new Date(),
+                userId: this.userId
             });
 
-            // Reset form
             form.reset();
         });
 
@@ -409,31 +395,47 @@ class ReviewSystem {
         this.displayReviews();
     }
 
-    createReviewElement(review) {
+    createReviewElement(review, index) {
         const reviewElement = document.createElement('div');
         reviewElement.className = 'review-card glow-purple';
         reviewElement.innerHTML = `
             <div class="stars">
-                ${Array(5).fill('').map((_, i) => 
-                    `<span class="${i < review.rating ? 'filled' : ''}">${i < review.rating ? '★' : '☆'}</span>`
-                ).join('')}
+                ${Array(5).fill('').map((_, i) =>
+            `<span class="${i < review.rating ? 'filled' : ''}">${i < review.rating ? '★' : '☆'}</span>`
+        ).join('')}
             </div>
             <p class="review-text">"${review.text}"</p>
             <p class="review-author">${review.author}</p>
             <span class="review-date">${new Date(review.date).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-            })}</span>
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        })}</span>
         `;
+
+        
+        if (review.userId === this.userId) {
+            const deleteBtn = document.createElement('button');
+            deleteBtn.className = 'delete-btn';
+            deleteBtn.innerText = '🗑 Delete';
+            deleteBtn.addEventListener('click', () => this.deleteReview(index));
+            reviewElement.appendChild(deleteBtn);
+        }
+
         return reviewElement;
     }
 
     displayReviews() {
         this.container.innerHTML = '';
-        this.reviews.forEach(review => {
-            this.container.appendChild(this.createReviewElement(review));
+        this.reviews.forEach((review, index) => {
+            this.container.appendChild(this.createReviewElement(review, index));
         });
+    }
+
+    deleteReview(index) {
+        this.reviews.splice(index, 1); 
+        this.saveReviews();
+        this.displayReviews(); 
     }
 
     saveReviews() {
@@ -449,6 +451,6 @@ class ReviewSystem {
     }
 }
 
-// Initialize Review System
+
 const reviewSystem = new ReviewSystem();
 reviewSystem.loadReviews();
