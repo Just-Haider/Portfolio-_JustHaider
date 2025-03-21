@@ -178,12 +178,20 @@ nav {
 
 .hero h1 {
     font-size: 5rem;
-    background: linear-gradient(90deg, #0ff, #8a2be2, #00f);
+    background: linear-gradient(270deg, #0ff, #8a2be2, #00f, #0ff); /* Added more colors for loop */
+    background-size: 600% 600%; /* Enlarged to allow smooth movement */
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    animation: float 3s ease-in-out infinite;
+    animation: gradientShift 4s ease infinite, float 3s ease-in-out infinite;
     position: relative;
+}
+
+/* Gradient shifting animation */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .hero h1::before {
@@ -728,6 +736,24 @@ footer p {
 
     .slide-left {
         transform: translateX(100%);
+    }
+
+    .featured-project {
+        width: 90%; 
+        height: 250px;
+    }
+
+    .project-content-f {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .featured-container {
+        flex-direction: column;
+    }
+
+    .project-content-f p span a {
+        font-size: 14px;
     }
 }
 
