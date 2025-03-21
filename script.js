@@ -3,7 +3,7 @@
 window.addEventListener('load', () => {
     setTimeout(() => {
         document.querySelector('.loader').classList.add('hidden');
-    }, 1000);
+    }, 0);
 });
 
 
@@ -355,25 +355,28 @@ particlesJS("particles-js", {
         "events": {
             "onhover": {
                 "enable": true,
-                "mode": "bubble"
+                "mode": ["bubble", "repulse"]
             },
             "onclick": {
                 "enable": true,
-                "mode": "repulse"
+                "mode": "push"
             },
             "resize": true
         },
         "modes": {
             "bubble": {
-                "distance": 120,
-                "size": 8,
-                "duration": 2,
+                "distance": 100,
+                "size": 12,
+                "duration": 0.3,
                 "opacity": 0.8,
                 "speed": 3
             },
             "repulse": {
-                "distance": 150,
+                "distance": 50,
                 "duration": 0.4
+            },
+            "push": {
+                "particles_nb": 3 
             }
         }
     },
