@@ -61,21 +61,55 @@ body {
     pointer-events: none;
 }
 
-.spinner {
-    width: 64px;
-    height: 64px;
-    border: 4px solid transparent;
-    border-top-color: var(--purple);
-    border-right-color: var(--blue);
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
+.intro {
+    font-size: 4.5rem;
+    font-weight: 800;
+    background: linear-gradient(270deg, #0ff, #8a2be2, #00f, #0ff);
+    background-size: 600% 600%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradientShift 4s ease infinite, float 3s ease-in-out infinite;
+    position: relative;
+}
+
+.line {
+    width: 250px;
+    height: 4px;
+    background: linear-gradient(90deg, #0ff, #8a2be2, #00f);
+    transform-origin: center;
+    opacity: 0;
+    animation: lineExpand 1.5s cubic-bezier(0.4, 0, 0.2, 1) alternate-reverse infinite;
+}
+
+.top-line {
+    margin-bottom: 10px;
+    animation-delay: 0.2s;
+}
+
+.bottom-line {
+    margin-top: 10px;
+    animation-delay: 0.2s;
+}
+
+@keyframes lineExpand {
+    0% {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scaleX(1);
+        opacity: 1;
     }
 }
+
 
 
 
@@ -235,6 +269,8 @@ nav {
     color: #888;
     animation: fadeIn 2s ease-out;
 }
+
+
 
 /* Sections */
 section {
@@ -649,6 +685,11 @@ h2 {
     animation: slideInOut 2s ease forwards;
 }
 
+.discord h3 {
+    margin: 10px 0;
+}
+
+
 @keyframes slideInOut {
     0% {
         transform: translateY(-10px);
@@ -757,4 +798,3 @@ footer p {
         font-size: 14px;
     }
 }
-
