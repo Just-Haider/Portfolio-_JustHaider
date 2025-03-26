@@ -745,6 +745,10 @@ footer p {
     .nav-links {
         display: none;
     }
+    
+    .intro{
+        font-size: 2.75rem
+    }
 
     .hero h1 {
         font-size: 2.75rem;
