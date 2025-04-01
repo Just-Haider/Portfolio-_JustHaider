@@ -1,16 +1,11 @@
 // Loader 
-
 window.addEventListener('load', () => {
+    document.body.style.overflow = "hidden"; // Hide scrollbar while loading
+
     setTimeout(() => {
         document.querySelector('.loader').classList.add('hidden');
-    }, 3000);
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    document.body.style.overflow = "hidden";
-    setTimeout(() => {
-        document.body.style.overflow = "auto";
-    }, 3000); 
+        document.body.style.overflow = "auto"; // Show scrollbar after loader disappears
+    }, 2000);
 });
 
 
