@@ -3,7 +3,14 @@
 window.addEventListener('load', () => {
     setTimeout(() => {
         document.querySelector('.loader').classList.add('hidden');
-    }, 4000);
+    }, 3000);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.body.style.overflow = "hidden";
+    setTimeout(() => {
+        document.body.style.overflow = "auto";
+    }, 3000); 
 });
 
 
