@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 :root {
     --primary: #00ffff;
@@ -39,6 +38,9 @@ body {
     border-radius: 10px;
     transition: background 0.2s ease-out;
 }
+/* .loader.hidden ~ body {
+    overflow: auto;
+} */
 
 
 /* Loader */
@@ -420,7 +422,8 @@ h2 {
 /* Projects Section */
 .project-card1,
 .project-card2,
-.project-card3 {
+.project-card3,
+.project-card4 {
     opacity: 0;
     transform: translateY(20px) scale(0.95);
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;
@@ -429,7 +432,8 @@ h2 {
 /* When the card becomes visible */
 .project-card1.visible,
 .project-card2.visible,
-.project-card3.visible {
+.project-card3.visible,
+.project-card4.visible {
     opacity: 1;
     transform: translateY(0) scale(1);
 }
@@ -441,17 +445,26 @@ h2 {
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    
 }
 
 .project-card1,
 .project-card2,
-.project-card3 {
+.project-card3,
+.project-card4 {
     position: relative;
     height: 250px;
     border-radius: 10px;
     overflow: hidden;
     background-position: center center;
     background-size: cover;
+}
+
+.project-card4 {
+    grid-column: 1 / -1;
+    margin: 0 auto;
+    width: 380px;
+    
 }
 
 .project-card1 {
@@ -465,6 +478,11 @@ h2 {
 .project-card3 {
     background: url(assets/images/P3.png) center center/cover no-repeat;
 }
+
+.project-card4 {
+    background: url(assets/images/P5.png) center center/cover no-repeat;
+}
+
 
 .project-content {
     position: absolute;
@@ -501,7 +519,8 @@ h2 {
 
 .project-card1:hover .project-content,
 .project-card2:hover .project-content,
-.project-card3:hover .project-content {
+.project-card3:hover .project-content,
+.project-card4:hover .project-content {
     transform: translateY(0);
 }
 
@@ -745,13 +764,13 @@ footer p {
     .nav-links {
         display: none;
     }
-    
-    .intro{
-        font-size: 2.75rem
-    }
 
     .hero h1 {
         font-size: 2.75rem;
+    }
+
+    .intro{
+        font-size: 2.75rem
     }
 
     .cta-buttons {
@@ -802,3 +821,4 @@ footer p {
         font-size: 14px;
     }
 }
+
