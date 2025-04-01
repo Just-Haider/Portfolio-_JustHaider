@@ -1,11 +1,16 @@
 // Loader 
-window.addEventListener('load', () => {
-    document.body.style.overflow = "hidden"; // Hide scrollbar while loading
 
+window.addEventListener('load', () => {
     setTimeout(() => {
         document.querySelector('.loader').classList.add('hidden');
-        document.body.style.overflow = "auto"; // Show scrollbar after loader disappears
     }, 2000);
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.body.style.overflow = "hidden";
+    setTimeout(() => {
+        document.body.style.overflow = "auto";
+    }, 2000); 
 });
 
 
@@ -118,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const projectCards = document.querySelectorAll('.project-card1, .project-card2, .project-card3');
+    const projectCards = document.querySelectorAll('.project-card1, .project-card2, .project-card3, .project-card4');
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
