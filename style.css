@@ -460,13 +460,6 @@ h2 {
     background-size: cover;
 }
 
-.project-card4 {
-    grid-column: 1 / -1;
-    margin: 0 auto;
-    width: 380px;
-    
-}
-
 .project-card1 {
     background: url(assets/images/P1.png) center center/cover no-repeat;
 }
