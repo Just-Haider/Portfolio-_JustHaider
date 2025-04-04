@@ -1,17 +1,23 @@
 // Loader 
-
 window.addEventListener('load', () => {
+    const loader = document.querySelector('.loader');
+
+    // Hide loader after 2s
     setTimeout(() => {
-        document.querySelector('.loader').classList.add('hidden');
+        loader.classList.add('hidden');
     }, 2000);
+
+    // Only re-enable scroll after the transition (fade-out) completes
+    loader.addEventListener('transitionend', () => {
+        document.body.style.overflow = 'auto';
+    });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+    // Prevent scrolling while loader is visible
     document.body.style.overflow = "hidden";
-    setTimeout(() => {
-        document.body.style.overflow = "auto";
-    }, 2000); 
 });
+
 
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
