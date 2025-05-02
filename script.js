@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const projectCards = document.querySelectorAll('.project-card1, .project-card2, .project-card3, .project-card4');
+    const projectCards = document.querySelectorAll('.project-card1, .project-card2, .project-card3, .project-card4, .project-card5');
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
