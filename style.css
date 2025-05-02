@@ -423,7 +423,8 @@ h2 {
 .project-card1,
 .project-card2,
 .project-card3,
-.project-card4 {
+.project-card4,
+.project-card5 {
     opacity: 0;
     transform: translateY(20px) scale(0.95);
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;
@@ -433,7 +434,8 @@ h2 {
 .project-card1.visible,
 .project-card2.visible,
 .project-card3.visible,
-.project-card4.visible {
+.project-card4.visible,
+.project-card5.visible {
     opacity: 1;
     transform: translateY(0) scale(1);
 }
@@ -451,7 +453,8 @@ h2 {
 .project-card1,
 .project-card2,
 .project-card3,
-.project-card4 {
+.project-card4,
+.project-card5 {
     position: relative;
     height: 250px;
     border-radius: 10px;
@@ -474,6 +477,10 @@ h2 {
 
 .project-card4 {
     background: url(assets/images/P5.png) center center/cover no-repeat;
+}
+
+.project-card5 {
+    background: url(assets/images/P6.png) center center/cover no-repeat;
 }
 
 
@@ -513,7 +520,8 @@ h2 {
 .project-card1:hover .project-content,
 .project-card2:hover .project-content,
 .project-card3:hover .project-content,
-.project-card4:hover .project-content {
+.project-card4:hover .project-content,
+.project-card5:hover .project-content {
     transform: translateY(0);
 }
 
@@ -814,4 +822,3 @@ footer p {
         font-size: 14px;
     }
 }
-
