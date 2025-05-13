@@ -425,7 +425,8 @@ h2 {
 .project-card3,
 .project-card4,
 .project-card5,
-.project-card6 {
+.project-card6,
+.project-card7 {
     opacity: 0;
     transform: translateY(20px) scale(0.95);
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;
@@ -437,7 +438,8 @@ h2 {
 .project-card3.visible,
 .project-card4.visible,
 .project-card5.visible,
-.project-card6.visible {
+.project-card6.visible,
+.project-card7.visible {
     opacity: 1;
     transform: translateY(0) scale(1);
 }
@@ -457,7 +459,8 @@ h2 {
 .project-card3,
 .project-card4,
 .project-card5,
-.project-card6 {
+.project-card6,
+.project-card7 {
     position: relative;
     height: 250px;
     border-radius: 10px;
@@ -488,6 +491,10 @@ h2 {
 
 .project-card6 {
     background: url(assets/images/P7.png) center center/cover no-repeat;
+}
+
+.project-card7 {
+    background: url(assets/images/P8.png) center center/cover no-repeat;
 }
 
 
@@ -529,7 +536,8 @@ h2 {
 .project-card3:hover .project-content,
 .project-card4:hover .project-content,
 .project-card5:hover .project-content,
-.project-card6:hover .project-content {
+.project-card6:hover .project-content,
+.project-card7:hover .project-content {
     transform: translateY(0);
 }
 
