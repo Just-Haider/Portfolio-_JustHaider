@@ -426,7 +426,10 @@ h2 {
 .project-card4,
 .project-card5,
 .project-card6,
-.project-card7 {
+.project-card7,
+.project-card8,
+.project-card9,
+.project-card10 {
     opacity: 0;
     transform: translateY(20px) scale(0.95);
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;
@@ -439,7 +442,10 @@ h2 {
 .project-card4.visible,
 .project-card5.visible,
 .project-card6.visible,
-.project-card7.visible {
+.project-card7.visible,
+.project-card8.visible,
+.project-card9.visible,
+.project-card10.visible {
     opacity: 1;
     transform: translateY(0) scale(1);
 }
@@ -460,7 +466,10 @@ h2 {
 .project-card4,
 .project-card5,
 .project-card6,
-.project-card7 {
+.project-card7,
+.project-card8,
+.project-card9,
+.project-card10 {
     position: relative;
     height: 250px;
     border-radius: 10px;
@@ -497,6 +506,9 @@ h2 {
     background: url(assets/images/P8.png) center center/cover no-repeat;
 }
 
+.project-card8 {
+    background: url(assets/images/P4.png) center center/cover no-repeat;
+}
 
 .project-content {
     position: absolute;
