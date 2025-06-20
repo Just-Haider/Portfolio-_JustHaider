@@ -549,7 +549,10 @@ h2 {
 .project-card4:hover .project-content,
 .project-card5:hover .project-content,
 .project-card6:hover .project-content,
-.project-card7:hover .project-content {
+.project-card7:hover .project-content,
+.project-card8:hover .project-content,
+.project-card9:hover .project-content,
+.project-card10:hover .project-content{
     transform: translateY(0);
 }
 
